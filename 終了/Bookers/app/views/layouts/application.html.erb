@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+    <%= link_to "Home", user_path(current_user.id) %>
+    <%= link_to "Users", users_path %>
+    <%= link_to "Books", books_path %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to "Home", "#" %>
+    <%= link_to "About", "#" %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

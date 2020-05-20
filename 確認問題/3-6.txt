@@ -1,0 +1,18 @@
+問１　a. すべてのデータを取り出すメソッドは、List.allメソッドである。
+問２　c. <% @lists.each do |list| %>
+	 タイトル
+	 <%= list.title %>
+	 <% end %>
+問３　d. def show
+	 @list = List.find(params[:id])
+	 end
+問４　a. <%=link_to 表示するテキスト, "リンク先URL" %>
+
+
+
+
+
+サーバー閉じたら
+sample_appまで移動して、下記の魔法の呪文を唱える。
+
+rails s -b 0.0.0.0

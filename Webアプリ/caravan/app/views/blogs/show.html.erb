@@ -1,0 +1,107 @@
+<header>
+  <h1 class="headline">
+    <%= link_to "CARAVAN", blogs_path %>
+  </h1>
+  <div class="social">
+    <i class="fa fa-facebook-square"></i>
+    <i class="fa fa-twitter-square"></i>
+    <i class="fa fa-instagram"></i>
+  </div>
+</header>
+ 
+<nav>
+  <ul class="nav-list">
+    <li class="nav-list-item">
+      <a href="#">Home</a>
+    </li>
+    <li class="nav-list-item">About</li>
+    <li class="nav-list-item">Topic</li>
+  </ul>
+</nav>
+ 
+<div class="main-visual">
+  <div class="main-visual-content">
+    <p class="main-visual-text">
+      The world is a book<br>
+      and those who do not travel<br>
+      read only one page.
+    </p>
+    <p class="main-visual-name">
+      St. Augustine
+    </p>
+  </div>
+</div>
+ 
+<main class="clearfix">
+  <section class="single-blog">
+    <h2 class="blog-headline">Blog</h2>
+    <section class="blog-box">
+      <h3 class="blog-box-headline">
+        <%= @blog.title %>
+      </h3>
+ 
+      <div class="blog-box-content">
+        <p class="category">
+          <%= @blog.category %>
+        </p>
+        <p class="blog-date">
+          <%= @blog.created_at %>
+        </p>
+      </div>
+ 
+      <%= image_tag "img/forest.jpg", class:"single-image" %>
+      <p class="single-text">
+        <%= @blog.body %>
+      </p>
+      <%= link_to "編集", edit_blog_path(@blog) %>
+      <%= link_to "削除", blog_path(@blog), method: :delete %>
+ 
+      <div class="author-case clearfix">
+        <div class="author-image"></div>
+        <div class="author-box">
+          <p class="author-name">By JOHN SMITH / Photographer</p>
+          <p class="author-text">His black and white landscapes, often captured at times<br>of the day and night when the light is fleeting, or in poor<br>weather conditions, such as rain, fog, or snow, are<br>reminiscent of the calm in a storm all with an ethereal<br>quality. </p>
+        </div>
+      </div>
+    </section>
+  </section>
+ 
+  <div class="sidebar">
+    <section class="popular">
+      <h2 class="sidebar-headline">Popular</h2>
+      <div class="sidebar-contents">
+        <p class="popular-text">To solve old problems,<br>study new species</p>
+        <p class="popular-text">Why Earth may someday<br>look like Mars</p>
+        <p class="popular-text">What will humans look<br>like in 100 years?</p>
+        <p class="popular-text">How to grow a forest<br>in your backyard</p>
+        <p class="popular-text">How humans could evolve<br>to survive in space</p>
+      </div>
+    </section>
+    <section class="instagram">
+      <h2 class="instagram-headline">Instagram</h2>
+      <div class="sidebar-contents clearfix">
+        <div class="instagram-box"></div>
+        <div class="instagram-box"></div>
+        <div class="instagram-box"></div>
+        <div class="instagram-box"></div>
+        <div class="instagram-box"></div>
+        <div class="instagram-box"></div>
+      </div>
+    </section>
+    <section class="categories">
+      <h2 class="categories-headline">Categories</h2>
+      <div class="sidebar-contents">
+        <p class="categories-text">Technology(15)</p>
+        <p class="categories-text">Business(23)</p>
+        <p class="categories-text">Entertainment(12)</p>
+        <p class="categories-text">Nature(32)</p>
+        <p class="categories-text">Education(9)</p>
+        <p class="categories-text">Adventure(23)</p>
+        <p class="categories-text">Communication(14)</p>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+<p class="footer-text">© All rights recerved by Infratop.Inc.</p>
+</footer>

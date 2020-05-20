@@ -1,0 +1,20 @@
+
+<% if flash[:notice] %>
+  <p id="notice">Book was successfully update</p>
+<% end %>
+<% if flash[:success] %>
+  <p class="success">Book was successfully create</p>
+<% end %>
+
+<p>
+	<strong>Title:</strong>
+	<%= @book.title %>
+</p>
+<p>
+	<strong>Body:</strong>
+	<%= @book.body %>
+</p>
+<td class="edit">
+	<%= link_to "Edit", edit_book_path(@book) %></td>
+<td class="edit">
+	<%= link_to "Back", books_path %></td>

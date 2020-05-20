@@ -1,0 +1,22 @@
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.boxes {
+	margin: 0 auto;
+	width: 600px;
+	background-color: yellow
+}
+.box1 {
+	float: left;
+	width: 150px;
+	height: 400px;
+	background-color: orange
+}
+.box2 {
+	float: right;
+	width: 250px;
+	height: 400px;
+	background-color: red
+}

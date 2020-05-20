@@ -1,0 +1,268 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ /* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+header, nav, h2, .main-visual, footer {
+  font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+/* common */
+ 
+/* header */
+header {
+  position: relative;
+  width: 90%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+header .headline{
+  font-size: 32px;
+}
+.social {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.social i {
+  display: inline-block;
+  margin-left: 20px;
+}
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.nav-list-item {
+  list-style: none;   
+  display: inline-block;
+  margin: 0 20px;
+}
+/* header */
+ 
+/*main-visual*/
+.main-visual {
+  width: 100%;
+  height: 300px;
+  background-image: url(img/mv.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.main-visual-content {
+  width: 40%;
+  height: 300px;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  padding-top: 105px;
+}
+.main-visual-text {
+  color: #fff;
+}
+.main-visual-name {
+  color: #fff;
+  margin-top: 30px;
+}
+/*main-visual*/
+ 
+/*main common*/
+main {
+  width: 800px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+/*main common*/
+ 
+/*blogs*/
+.blog {
+  width: 540px;
+  float: left;
+  margin-right: 30px;
+}
+.blog-headline {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+.blog-box {
+  padding-top: 50px;
+}
+.blog-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.blog-image {
+  float: left;
+  width: 276.92px;
+  background-position: center;
+  background-size: cover;
+  height: 180px;
+}
+.blog-text-headline {
+  padding-bottom: 15px;
+}
+.blog-text {
+  float: left;
+  padding: 30px 0 0 25px;
+  width: calc(100% - 277px);
+}
+.blog-date {
+  display: inline-block;
+  font-size: 12px;
+}
+.category {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #acabab;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+}
+.pagination {
+  text-align: center;
+  padding-top: 50px;
+}
+.pagination p {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  color: #fff;
+  background-color: #acabab;
+  border-radius: 3px;
+  line-height: 30px;
+}
+/*blogs*/
+ 
+/*sidebar*/
+.sidebar {
+  width: 230px;
+  float: left;
+}
+.sidebar-headline, .instagram-headline, .categories-headline {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+.sidebar-contents {
+  padding: 50px 0;
+}
+.popular-text, .categories-text {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;
+}
+.popular-text:last-child, .categories-text:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.instagram-box {
+  float: left;
+  width: 110px;
+  padding-top: 110px;
+  background-size: cover;
+  background-position: center;
+}
+.instagram-box:nth-child(odd) {
+  margin: 0 10px 10px 0;
+}
+.instagram-box:nth-child(1) {
+  background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2) {
+  background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3) {
+  background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4) {
+  background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5) {
+  background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6) {
+  background-image: url(img/road.jpg);
+}
+/*sidebar*/
+ 
+/*footer*/
+footer {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #848282;
+}
+.footer-text {
+  color: #fff;
+}
+/*footer*/
+ 
+/*---show.html.erb---*/
+.single-blog {
+  float: left;
+  width: 520px;
+  margin-right: 50px;
+}
+.blog-box-content {
+  margin: 15px 5px 20px 0;
+}
+.single-image {
+  width: 100%;
+}
+.single-text {
+  margin: 15px 5px 20px 0;
+  font-size: 15px;
+}
+.author-case {
+  margin-top: 30px;
+  border-top: 1px solid #f7f7f7;
+  padding: 30px 10px;
+}
+.author-image {
+  width: 110px;
+  height: 110px;
+  background-image: url(img/person.jpg);
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+.author-box {
+  width: calc(100% - 110px);
+  float: left;
+  padding: 0 0 0 20px;
+}
+.author-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.author-text {
+  font-size: 10px;
+}
+/*---show.html.erb---*/

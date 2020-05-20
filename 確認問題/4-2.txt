@@ -1,0 +1,14 @@
+問１　a. rails g controller posts index show
+問２　d. resources :posts
+
+
+問３　b. get 'posts' => 'posts#index', as: 'posts'
+↓
+解答
+【d. resources :posts, :index】
+解説
+この問題では、【resources :posts, :index】が間違った記述となります。
+間違った記述と言いましてもエラーが出るわけではありません
+似たような記述ですが、生成されるルーティングが全く異なるので記述したコードに自信がなければ
+rake routes
+で確認してみましょう

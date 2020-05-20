@@ -1,0 +1,2 @@
+問１　b. @blog = Blog.new
+問２　d. <%= form_for(インスタンス) do |f| %>

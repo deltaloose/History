@@ -1,0 +1,22 @@
+<h2>Users</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+</table>
+  <tbody>
+  	<% @users.each do |user| %>
+  	<div class="user">
+	<%= link_to(user.name, "/users/#{user.id}") %>
+      <tr>
+        <td><!--img class="" alt="No image icon"--></td>
+        <td><%= user.name %></td>
+        <td><!-- プロフ --></td>
+      </tr>
+  </div>
+    <% end %>
+  </tbody>

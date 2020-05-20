@@ -1,0 +1,5 @@
+問１　b.  def list_params
+　　　params.require(:モデル名).permit(:カラム名１, :カラム名２...)
+　　　end
+
+問２　a.  「form_for」である。

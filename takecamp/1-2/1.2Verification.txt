@@ -1,0 +1,8 @@
+２章　演習
+　問１　webページに載せたい要素は<body>内
+　問２　リンク飛ばし　１<a src=""></a> →ハイパーリンク付けるのもherf
+　問３　文字化け防ぎ　２<meta charset="UTF8">
+　問４　css関連付け　 １<link rel="stylesheet" href="">
+　問５　複数付けは　　２<div class
+
+改行いれても反映されへんから見やすいようにしよう

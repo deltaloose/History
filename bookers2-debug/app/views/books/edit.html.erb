@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<h1>Editing Book</h1>
+	<%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
+		<% if @book.errors.any? %>
+		<h3 class="text-danger"><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
+			<% @book.errors.full_messages.each do |msg| %>
+			<ul class="text-danger">
+			<li><%= msg %></li></ul>
+			<% end %>
+		<% end %>
+			<div class="field row">
+				<label for="book_title">Title</label>
+				<div class=""><%= f.text_field :title, class: "col-xs-12 book_title" %></div>
+			</div>
+			<div class="field row">
+				<label for="book_opinion">Opinion</label>
+				<%= f.text_area :body, class: "col-xs-12 book_body" %>
+			</div>
+			<%= f.submit 'Update Book', class: "btn btn-primary col-xs-12" %>
+		<% end %>
+<%= link_to "Show", @book, class: "book_#{@book.id}" %>
+<%= link_to "Back", books_path, class: "back" %>
+
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
